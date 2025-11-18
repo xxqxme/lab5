@@ -1,24 +1,87 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="lab5" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4ix-yi-6Gd">
+                                <rect key="frame" x="29" y="82.000000000000028" width="348" height="379.66666666666674"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="379.66666666666674" id="Hf0-AR-1y5"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qZj-AY-wgf">
+                                <rect key="frame" x="42.000000000000014" y="513.66666666666663" width="198.33333333333337" height="21"/>
+                                <string key="text">Введіть ISBN( ID книжки)
+</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Приклад: Гаррі Поттер – 9780545582889" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pTQ-px-ZdR">
+                                <rect key="frame" x="42" y="542.66666666666663" width="331" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KFl-FA-HXK">
+                                <rect key="frame" x="20" y="583" width="353" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gs-in-zUk">
+                                <rect key="frame" x="158" y="637" width="77.333333333333314" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Пошук"/>
+                                <connections>
+                                    <action selector="loadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ir-hg-Nys"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray4Color"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ix-yi-6Gd" secondAttribute="trailing" constant="16" id="2Gy-Bu-Qrc"/>
+                            <constraint firstItem="8gs-in-zUk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6J2-ol-tq7"/>
+                            <constraint firstItem="KFl-FA-HXK" firstAttribute="top" secondItem="pTQ-px-ZdR" secondAttribute="bottom" constant="20" id="7o9-w6-Zbl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qZj-AY-wgf" secondAttribute="trailing" symbolic="YES" id="8ub-Nw-fPj"/>
+                            <constraint firstItem="qZj-AY-wgf" firstAttribute="leading" secondItem="pTQ-px-ZdR" secondAttribute="leading" id="Ba2-K9-Ge3"/>
+                            <constraint firstItem="4ix-yi-6Gd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="KRs-DG-gIF"/>
+                            <constraint firstItem="8gs-in-zUk" firstAttribute="top" secondItem="KFl-FA-HXK" secondAttribute="bottom" constant="20" id="QME-5d-Cj7"/>
+                            <constraint firstItem="pTQ-px-ZdR" firstAttribute="top" secondItem="qZj-AY-wgf" secondAttribute="bottom" constant="8" id="R49-ex-Wzu"/>
+                            <constraint firstItem="KFl-FA-HXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UYx-Yi-lh7"/>
+                            <constraint firstItem="4ix-yi-6Gd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ZB5-nc-Oha"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pTQ-px-ZdR" secondAttribute="trailing" constant="20" id="ao4-4B-BNZ"/>
+                            <constraint firstItem="qZj-AY-wgf" firstAttribute="top" secondItem="4ix-yi-6Gd" secondAttribute="bottom" constant="52" id="dK2-W5-fav"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFl-FA-HXK" secondAttribute="trailing" constant="20" id="sWX-0i-vSr"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="coverImageView" destination="4ix-yi-6Gd" id="jwF-yF-7Qy"/>
+                        <outlet property="imageViewHeightConstraint" destination="Hf0-AR-1y5" id="OeU-3E-fBJ"/>
+                        <outlet property="isbnField" destination="KFl-FA-HXK" id="rYV-gu-g3j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="23.664122137404579" y="-27.464788732394368"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
