@@ -1,29 +1,29 @@
-//
-//  SettingsViewController.swift
-//  lab5
-//
-//  Created by ІПЗ-31/2 on 25.11.2025.
-//
-
 import UIKit
 
 class SettingsViewController: UIViewController {
 
+    @IBOutlet weak var colorSegment: UISegmentedControl!
+    @IBOutlet weak var fontSegment: UISegmentedControl!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        let bg = UserDefaults.standard.string(forKey: "bgColor") ?? "white"
+        colorSegment.selectedSegmentIndex = (bg == "white" ? 0 : 1)
+
+        let font = UserDefaults.standard.integer(forKey: "fontSize")
+        fontSegment.selectedSegmentIndex = (font == 16 ? 0 : 1)
     }
-    
 
-    /*
-    // MARK: - Navigation
+    @IBAction func saveButtonPressed(_ sender: Any) {
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let bgColor = (colorSegment.selectedSegmentIndex == 0 ? "white" : "black")
+        UserDefaults.standard.set(bgColor, forKey: "bgColor")
+
+        let size = (fontSegment.selectedSegmentIndex == 0 ? 16 : 26)
+        UserDefaults.standard.set(size, forKey: "fontSize")
+
+
+        navigationController?.popViewController(animated: true)
     }
-    */
-
 }

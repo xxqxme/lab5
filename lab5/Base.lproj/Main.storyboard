@@ -49,29 +49,67 @@
                                     <action selector="loadButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8ir-hg-Nys"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Тема" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uVJ-7m-cPa">
+                                <rect key="frame" x="16" y="680" width="41" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="z5s-3R-oY3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v35-cd-RfV">
+                                <rect key="frame" x="81" y="682" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchesChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="G8b-Z9-GaL"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Розмір шрифту" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QN0-oB-Z28">
+                                <rect key="frame" x="186" y="687" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XIc-Wb-hRx">
+                                <rect key="frame" x="316" y="682" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchesChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="QGk-iQ-pfU"/>
+                                </connections>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray4Color"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4ix-yi-6Gd" secondAttribute="trailing" constant="16" id="2Gy-Bu-Qrc"/>
                             <constraint firstItem="8gs-in-zUk" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="6J2-ol-tq7"/>
+                            <constraint firstItem="XIc-Wb-hRx" firstAttribute="leading" secondItem="QN0-oB-Z28" secondAttribute="trailing" constant="8" id="6tn-qR-xgz"/>
                             <constraint firstItem="KFl-FA-HXK" firstAttribute="top" secondItem="pTQ-px-ZdR" secondAttribute="bottom" constant="20" id="7o9-w6-Zbl"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="qZj-AY-wgf" secondAttribute="trailing" symbolic="YES" id="8ub-Nw-fPj"/>
                             <constraint firstItem="qZj-AY-wgf" firstAttribute="leading" secondItem="pTQ-px-ZdR" secondAttribute="leading" id="Ba2-K9-Ge3"/>
+                            <constraint firstItem="uVJ-7m-cPa" firstAttribute="centerY" secondItem="XIc-Wb-hRx" secondAttribute="centerY" id="GL4-7q-Tc9"/>
+                            <constraint firstItem="uVJ-7m-cPa" firstAttribute="top" secondItem="KFl-FA-HXK" secondAttribute="bottom" constant="63" id="GkP-1V-3JO"/>
                             <constraint firstItem="4ix-yi-6Gd" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="23" id="KRs-DG-gIF"/>
+                            <constraint firstItem="uVJ-7m-cPa" firstAttribute="centerY" secondItem="v35-cd-RfV" secondAttribute="centerY" id="Lgb-Ge-I1L"/>
+                            <constraint firstItem="QN0-oB-Z28" firstAttribute="leading" secondItem="v35-cd-RfV" secondAttribute="trailing" constant="56" id="OBg-az-NGc"/>
                             <constraint firstItem="8gs-in-zUk" firstAttribute="top" secondItem="KFl-FA-HXK" secondAttribute="bottom" constant="20" id="QME-5d-Cj7"/>
                             <constraint firstItem="pTQ-px-ZdR" firstAttribute="top" secondItem="qZj-AY-wgf" secondAttribute="bottom" constant="8" id="R49-ex-Wzu"/>
                             <constraint firstItem="KFl-FA-HXK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="UYx-Yi-lh7"/>
                             <constraint firstItem="4ix-yi-6Gd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="29" id="ZB5-nc-Oha"/>
+                            <constraint firstItem="uVJ-7m-cPa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="aFd-hQ-s2c"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pTQ-px-ZdR" secondAttribute="trailing" constant="20" id="ao4-4B-BNZ"/>
                             <constraint firstItem="qZj-AY-wgf" firstAttribute="top" secondItem="4ix-yi-6Gd" secondAttribute="bottom" constant="52" id="dK2-W5-fav"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="uVJ-7m-cPa" secondAttribute="trailing" constant="336" id="e08-Ym-TWM"/>
+                            <constraint firstItem="v35-cd-RfV" firstAttribute="leading" secondItem="uVJ-7m-cPa" secondAttribute="trailing" constant="24" id="g9a-du-Mho"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KFl-FA-HXK" secondAttribute="trailing" constant="20" id="sWX-0i-vSr"/>
+                            <constraint firstItem="uVJ-7m-cPa" firstAttribute="centerY" secondItem="QN0-oB-Z28" secondAttribute="centerY" id="yHs-B8-T4D"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="coverImageView" destination="4ix-yi-6Gd" id="jwF-yF-7Qy"/>
+                        <outlet property="fontSwitch" destination="XIc-Wb-hRx" id="Zuy-C6-2Ye"/>
                         <outlet property="imageViewHeightConstraint" destination="Hf0-AR-1y5" id="OeU-3E-fBJ"/>
                         <outlet property="isbnField" destination="KFl-FA-HXK" id="rYV-gu-g3j"/>
+                        <outlet property="themeSwitch" destination="v35-cd-RfV" id="VA8-wZ-1GC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
